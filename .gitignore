@@ -1,0 +1,39 @@
+# Terraform working files
+.terraform/
+.terraform.tfstate.lock.info
+crash.log
+
+# State files can contain secrets (DB password, secret values): never commit
+*.tfstate
+*.tfstate.*
+
+# Variable files that may hold secrets (remove this line if yours never do)
+*.auto.tfvars
+secrets.tfvars
+*.tfvars.json
+
+# Plan files
+*.tfplan
+tfplan
+
+# Lambda build output (re-created on every apply)
+.build/
+
+# Local overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+
+# NOTE: commit .terraform.lock.hcl (provider version lock)
+# Environment files (secrets)
+.env
+.env.*
+!.env.example
